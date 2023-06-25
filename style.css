@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaryColor: #6d28d9;
+    --secondaryColor: #ede9fe;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #7c7c7c;
+    --secondaryGrey: #ccc;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.4s linear;
+    --mainRed: #db2777;
+    --bodyColor: #f6f6f6;
+}
+
+body {
+    background-color: var(--bodyColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.form-container {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0 .5rem 0;
+}
+
+.todo-form {
+    border: 2px solid var(--secondaryGrey);
+    border-radius: .4rem;
+    overflow: hidden;
+    display: flex;
+    width: 25rem;
+}
+
+.todo-input {
+    border: none;
+    outline: none;
+    padding: .6rem .8rem;
+    color: var(--primaryColor);
+    font-weight: bold;
+    font-size: .9rem;
+    flex: 1;
+}
+
+.add-btn {
+    cursor: pointer;
+    border: none;
+    background-color: var(--bodyColor);
+    color: var(--primaryColor);
+    padding: .6rem .8rem;
+    font-size: 1rem;
+
+}
+
+.add-btn:hover {
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+    transition: var(--mainTransition);
+}
+
+.select-status,
+.sort-date {
+    border-radius: .4rem;
+    outline: none;
+    border: 2px solid var(--secondaryGrey);
+    color: var(--primaryColor);
+}
+
+.todo-item {
+    background-color: var(--mainWhite);
+    border-radius: .4rem;
+    padding: .6rem .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    width: 25rem;
+    transition: var(--mainTransition);
+}
+
+.todo-title {
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+
+.todo-completed {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.todo-remove {
+    border: none;
+    background-color: transparent;
+    color: var(--mainRed);
+    cursor: pointer;
+    font-weight: bold;
+    padding: .3rem .5rem;
+    border-radius: .3rem;
+}
+
+.todo-date {
+    font-size: small;
+}
+
+.todo-remove:hover {
+    background-color: #f4dddd;
+    transition: var(--mainTransition);
+}
+
+.todo-check {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--mainWhite);
+    border: 1px solid var(--primaryColor);
+    color: var(--primaryColor);
+    cursor: pointer;
+    border-radius: .3rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-details {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.error-text {
+    color: red;
+    font-size: small;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.todos-container {
+    margin-top: 1rem;
+
+}
